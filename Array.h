@@ -91,11 +91,18 @@ void Array<string>::sortAscending(){
 
 template<> int Array<string>::maxElement() {
     int max = 0;
+    string word = "";
+    int foundIndex = 0;
     for(int i = 0; i < maxSize; i++){
         if(array[i].length() > max){
             max = array[i].length();
+            foundIndex = i;
         }
     }
+
+    for(int j=foundIndex;j<maxSize - foundIndex;j++)
+        word+=array[j];
+    cout << word << " dlugosc ";
     return max;
 }
 
@@ -118,7 +125,5 @@ template<typename T>
 T Array<T>::getElement(int index) {
     return array[index];
 }
-
-
 
 #endif //LAB3_CPP_ARRAY_H

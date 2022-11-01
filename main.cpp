@@ -69,12 +69,9 @@ template <typename T> T functionExercise1(T *array, int size){
     return min;
 }
 
-
-
-
 void exercise2(){
     int intArray[5] = {10,3,223,2,12212};
-    string stringArray[5] = {"wyrewolwerowany","ciastko","oko","baklazan","onomatopeja"};
+    string stringArray[5] = {"wyrewolwerowany","awokado","oko","baklazan","onomatopeja"};
     char charArray[5] = {'g','b','a','d','e'};
     cout << "elementy tablicy int: ";
     for(int i=0;i<5;i++) cout << intArray[i] << " ";
@@ -106,7 +103,7 @@ void exercise3(){
     for(int i=0;i<5;i++) stringArray.addArray(stringExample[i]);
     cout << endl << "(string)";
     stringArray.showArray();
-    cout << "najdluzszy element ma: " << stringArray.maxElement() << " znakow" <<endl;
+    cout << "najdluzszy element: " << stringArray.maxElement()<<endl;
     cout << "po sortowaniu ";
     stringArray.sortAscending();
     stringArray.showArray();
